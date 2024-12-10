@@ -1,0 +1,7 @@
+C:\Users\Admin\source\repos\EjerciciosObligatorios2024\Ejercicio04\bin\Debug\Ejercicio04.exe.config
+C:\Users\Admin\source\repos\EjerciciosObligatorios2024\Ejercicio04\bin\Debug\Ejercicio04.exe
+C:\Users\Admin\source\repos\EjerciciosObligatorios2024\Ejercicio04\bin\Debug\Ejercicio04.pdb
+C:\Users\Admin\source\repos\EjerciciosObligatorios2024\Ejercicio04\obj\Debug\Ejercicio04.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\EjerciciosObligatorios2024\Ejercicio04\obj\Debug\Ejercicio04.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\EjerciciosObligatorios2024\Ejercicio04\obj\Debug\Ejercicio04.exe
+C:\Users\Admin\source\repos\EjerciciosObligatorios2024\Ejercicio04\obj\Debug\Ejercicio04.pdb
