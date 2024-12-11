@@ -27,11 +27,17 @@ namespace Ejercicio14
 
           
             if (DiasACaducar == 1)
-                precioFinal *= 0.25;  // Se reduce 4 veces el precio
+            {
+                precioFinal *= 0.25; 
+            }// Se reduce 4 veces el precio
             else if (DiasACaducar == 2)
-                precioFinal *= 0.33;  // Se reduce 3 veces el precio
+            {
+                precioFinal *= 0.33;  
+            }// Se reduce 3 veces el precio
             else if (DiasACaducar == 3)
-                precioFinal *= 0.5;   // Se reduce a la mitad del precio
+            {
+                precioFinal *= 0.5;
+            }// Se reduce a la mitad del precio
 
             return  precioFinal;
         }
