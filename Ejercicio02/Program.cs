@@ -27,11 +27,11 @@ namespace Ejercicio02
             Persona p1 = new Persona(nombre, edad, sexo, peso, altura);
             Persona p2 = new Persona(nombre, edad, sexo);
             Persona p3 = new Persona();
-            p3.setNombre("Default");
-            p3.setEdad(30);
-            p3.setSexo('M');
-            p3.setPeso(70);
-            p3.setAltura(1.75);
+            p3.Nombre("Guillermo D");
+            p3.Edad(30);
+            p3.Sexo('M');
+            p3.Peso(70);
+            p3.Altura(1.75);
 
           
             Persona[] personas = { p1, p2, p3 };
