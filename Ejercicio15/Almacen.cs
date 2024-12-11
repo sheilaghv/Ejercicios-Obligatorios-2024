@@ -38,10 +38,10 @@ namespace Ejercicio15
                         Estanterias[i, j] = producto;  // Almacenamos el producto aca
                         Console.WriteLine(" Producto: " + producto.Marca + " almacenado en la posición " + i + " , " + j);
                         almacenado = true;
-                        break;
+                        break;  //para el if
                     }
                 }
-                if (almacenado) break;
+                if (almacenado) break; //para el for
             }
 
             // Si no encontramos espacio libre
