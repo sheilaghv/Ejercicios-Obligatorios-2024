@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio17
 {
-    public enum PalosBarEspañola
+    public enum PalosBarEspañola  //agrupa todos esos los valores bajo un nombre
     {
         OROS,
         COPAS,
