@@ -19,9 +19,16 @@ namespace Ejercicio03
 
         private string GenerarPassword()
         {
-            const string caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+           const string caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
             Random random = new Random();
-            return new string(Enumerable.Range(0, Longitud).Select( => caracteres[random.Next(caracteres.Length)]).ToArray());
+            char[] password = new char[Longitud];
+        
+            for (int i = 0; i < Longitud; i++)
+            {
+                password[i] = caracteres[random.Next(caracteres.Length)];
+            }
+        
+            return new string(password);
         }
 
         public bool EsFuerte() =>
