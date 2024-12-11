@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +9,7 @@ namespace Ejercicio02
 
     internal class Program
     {
-       
+     
         static void Main(string[] args)
         {
             Console.WriteLine("Introduce el nombre: ");
@@ -33,13 +33,13 @@ namespace Ejercicio02
             p3.setPeso(70);
             p3.setAltura(1.75);
 
-            // Evaluar y mostrar resultados
+          
             Persona[] personas = { p1, p2, p3 };
             foreach (Persona persona in personas)
             {
                 Console.WriteLine(persona.ToString());
-                Console.WriteLine($"Mayor de edad: {persona.esMayorDeEdad()}");
-                Console.WriteLine($"IMC: {interpretarIMC(persona.calcularIMC())}");
+                Console.WriteLine("Mayor de edad: " + persona.esMayorDeEdad());
+                Console.WriteLine("IMC:" + persona.calcularIMC());
                 Console.WriteLine();
             }
             Console.ReadKey();
