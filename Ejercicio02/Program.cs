@@ -9,26 +9,7 @@ namespace Ejercicio02
 
     internal class Program
     {
-        static string interpretarIMC(int imc) //metodo
-        {
-            if (imc == -1)
-            {
-                return "Debajo del peso ideal";
-            }
-            else if (imc == 0)
-            {
-                return "Peso ideal";
-            }
-            else if (imc == 1)
-            {
-                return "Sobrepeso";
-            }
-            else
-            {
-                return "Error";
-            }
-
-        }
+       
         static void Main(string[] args)
         {
             Console.WriteLine("Introduce el nombre: ");
