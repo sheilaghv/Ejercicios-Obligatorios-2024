@@ -161,7 +161,7 @@ namespace Ejercicio04
             double precio = base.PrecioFinal();
             if (Resolucion > 40)
             {
-                precio += precioBase * 0.3;
+                precio += precioBase * 0.3; //aumenta un 30%
             }
             if (SintonizadorTDT)
             {
