@@ -24,7 +24,7 @@ namespace Ejercicio08
 
         public bool EstaAprobado()
         {
-            return Califacion >= 5;
+            return Califacion >= 6;
         }
     }
 }
