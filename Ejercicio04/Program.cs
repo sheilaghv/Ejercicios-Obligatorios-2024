@@ -21,8 +21,8 @@ namespace Ejercicio04
             electrodomest[5] = new Electrodomestico(100, 15);
             electrodomest[6] = new Television(500, "Gris", 'A', 20, 60, true);
             electrodomest[7] = new Lavadora(250, 35);
-            electrodomest[8] = new Electrodomestico();
-            electrodomest[9] = new Lavadora();
+            electrodomest[8] = new Electrodomestico(); //por defecto
+            electrodomest[9] = new Lavadora();  //por defecto
 
             double totalElectrodomesticos = 0, totalLavadoras = 0, totalTelevisores = 0;
 
@@ -31,9 +31,9 @@ namespace Ejercicio04
                 double precio = electro.PrecioFinal();
                 totalElectrodomesticos += precio;
 
-                if (electro is Lavadora lavadora)
+                if (electro is Lavadora lavadora) //si es lavadora
                 {
-                    totalLavadoras += precio;
+                    totalLavadoras += precio;  //aumenta en lavadoras
                 }
                 else if (electro is Television televisor)
                 {
@@ -41,9 +41,9 @@ namespace Ejercicio04
                 }
             }
 
-            Console.WriteLine($"Precio Electrodomésticos: {totalElectrodomesticos}");
-            Console.WriteLine($"Precio Lavadoras: {totalLavadoras}");
-            Console.WriteLine($"Precio Tele: {totalTelevisores}");
+            Console.WriteLine("Precio Electrodomésticos: " + totalElectrodomesticos);
+            Console.WriteLine("Precio Lavadoras: " + totalLavadoras);
+            Console.WriteLine("Precio Tele:" + totalTelevisores);
 
             Console.ReadKey();
         }
