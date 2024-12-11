@@ -34,7 +34,7 @@ namespace Ejercicio08
                 Console.WriteLine("Se puede dar clase.");
                 foreach (var estudiante in aula.Estudiantes)
                 {
-                    if (estudiante.Califacion >= 6)
+                    if (estudiante.EstaAprobado())
                     {
                         if (estudiante.Sexo == 'M')
                         {
