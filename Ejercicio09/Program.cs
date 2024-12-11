@@ -35,7 +35,7 @@ namespace Ejercicio09
 
             foreach (var espectador in espectadores)
             {
-                if (cine.SentarEspectador(espectador))
+                if (cine.SentarEspectador(espectador)) //si el metodo da true
                 {
                     Console.WriteLine($"{espectador.Nombre} se sentó.");
                 }
