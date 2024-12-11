@@ -27,7 +27,9 @@ namespace Ejercicio09
             {
                 for (int j = 0; j < Sala.GetLength(1); j++) //recorre las columnas
                 {
-                    Sala[i, j] = $"{8 - i}{(char)('A' + j)}";
+                     int fila = 8 - i; // resta 8 con la posicion de cada fila ; 8-0= 8... 
+                     char columna = (char)('A' + j); // le suma a A cada posicion de la columna A + 0 = A... A + (posicion)1 = B
+                     Sala[i, j] = fila.ToString() + columna; // las combina y las escribe
                 }
             }
 
