@@ -31,11 +31,19 @@ namespace Ejercicio03
             return new string(password);
         }
 
-        public bool EsFuerte() =>
-            Contraseña.Count(char.IsUpper) > 2 &&
-            Contraseña.Count(char.IsLower) > 1 &&
-            Contraseña.Count(char.IsDigit) > 5;
-    }
+        public bool EsFuerte()
+        {
+            int mayusculas = 0, minusculas = 0, digitos = 0;
+        
+            foreach (char c in Contraseña)
+            {
+                if (char.IsUpper(c)) mayusculas++;
+                else if (char.IsLower(c)) minusculas++;
+                else if (char.IsDigit(c)) digitos++;
+            }
+        
+            return mayusculas > 2 && minusculas > 1 && digitos > 5;
+        }
 
     class Program
     {
@@ -47,7 +55,18 @@ namespace Ejercicio03
             Console.Write("Longitud de las contraseñas: ");
             int longitud = int.Parse(Console.ReadLine());
 
-            var passwords = Enumerable.Range(0, cantidad).Select( => new Password(longitud)).ToList();
+           List<Password> passwords = new List<Password>();
+
+        for (int i = 0; i < cantidad; i++) //cuantas veces se va a repetir
+        {
+            passwords.Add(new Password(longitud)); //añade la contraseña a la lista
+        }
+        
+                  
+        foreach (var password in passwords)
+        {
+            Console.WriteLine(password); //
+        }
 
             passwords.ForEach(p => Console.WriteLine($"{p.Contraseña} {p.EsFuerte()}"));
         }
