@@ -44,7 +44,7 @@ namespace Ejercicio09
             }
 
             Random random = new Random();
-            while (true)
+            while (true)  //mientras que bool sentarespectador sea verdadero va c cumplir lo siguiente 
             {
                 int fila = random.Next(0, 8);
                 int columna = random.Next(0, 9);
