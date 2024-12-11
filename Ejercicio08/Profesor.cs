@@ -24,7 +24,7 @@ namespace Ejercicio08
         public bool EstaDisponible()
         {
             Random rnd = new Random();
-            return rnd.Next(0, 100) >= 20;
+            return rnd.Next(0, 100) >= 20; //si nos da un numero mayor o igual a 20 va a estar disponible y nos devuelve true
         }
     }
 }
