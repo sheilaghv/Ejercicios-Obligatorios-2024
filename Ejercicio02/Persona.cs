@@ -8,13 +8,13 @@ namespace Ejercicio02
 {
     class Persona
     {
-        // Constantes
+       
         private const char SEXO_DEFECTO = 'H';
         private const int IMCBAJO = -1;
         private const int IMCIDEAL = 0;
         private const int IMCALTO = 1;
 
-        // Atributos privados
+      
         private string nombre = "";
         private int edad = 0;
         private string dni;
@@ -22,7 +22,6 @@ namespace Ejercicio02
         private double peso = 0;
         private double altura = 0;
 
-        // Constructores
         public Persona() { }
 
         public Persona(string nombre, int edad, char sexo)
@@ -40,7 +39,7 @@ namespace Ejercicio02
             this.altura = altura;
         }
 
-        // Métodos
+     
         public int calcularIMC()
         {
             double imc = peso / (altura * altura);
@@ -49,7 +48,7 @@ namespace Ejercicio02
                 return IMCBAJO;
             }
             else if (imc <= 25) 
-            {+
+            {
                 return IMCIDEAL;
             }
             else return IMCALTO;
