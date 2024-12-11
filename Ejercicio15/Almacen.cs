@@ -82,7 +82,7 @@ namespace Ejercicio15
             double precioTotal = 0;
             for (int i = 0; i < Estanterias.GetLength(0); i++)
             {
-                var producto = Estanterias[i, columna];
+                var producto = Estanterias[i, columna]; //en que columna se encuentra el producto
                 if (producto != null)
                 {
                     precioTotal += producto.CalcularPrecio();
