@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,56 +19,65 @@ namespace Ejercicio03
 
         private string GenerarPassword()
         {
-           const string caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            const string caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
             Random random = new Random();
             char[] password = new char[Longitud];
-        
+
             for (int i = 0; i < Longitud; i++)
             {
                 password[i] = caracteres[random.Next(caracteres.Length)];
             }
-        
+
             return new string(password);
         }
 
         public bool EsFuerte()
         {
-            int mayusculas = 0, minusculas = 0, digitos = 0;
-        
+            int mayusculas = 0;
+            int minusculas = 0;
+            int numeros = 0;
+
             foreach (char c in Contraseña)
             {
                 if (char.IsUpper(c)) mayusculas++;
                 else if (char.IsLower(c)) minusculas++;
-                else if (char.IsDigit(c)) digitos++;
+                else if (char.IsDigit(c)) numeros++;
             }
-        
-            return mayusculas > 2 && minusculas > 1 && digitos > 5;
+
+            return mayusculas > 2 && minusculas > 1 && numeros > 5;
         }
 
-    class Program
-    {
-        static void Main()
+        class Program
         {
-            Console.Write("Cantidad de contraseñas: ");
-            int cantidad = int.Parse(Console.ReadLine());
+            static void Main()
+            {
+             
+                Console.Write("Cantidad de contraseñas para generar: ");
+                int cantidad = int.Parse(Console.ReadLine());
 
-            Console.Write("Longitud de las contraseñas: ");
-            int longitud = int.Parse(Console.ReadLine());
+                Console.Write("Longitud de las contraseñas: ");
+                int longitud = int.Parse(Console.ReadLine());
 
-           List<Password> passwords = new List<Password>();
+                Password[] passwords = new Password[cantidad];
+              
+                bool[] esFuerte = new bool[cantidad];
 
-        for (int i = 0; i < cantidad; i++) //cuantas veces se va a repetir
-        {
-            passwords.Add(new Password(longitud)); //añade la contraseña a la lista
-        }
-        
-                  
-        foreach (var password in passwords)
-        {
-            Console.WriteLine(password); //
-        }
+              
+                for (int i = 0; i < cantidad; i++)
+                {
+                    passwords[i] = new Password(longitud);
+                    esFuerte[i] = passwords[i].EsFuerte(); // verifica si es fuerte
+                }
 
-            passwords.ForEach(p => Console.WriteLine($"{p.Contraseña} {p.EsFuerte()}"));
+                // muestra las contraseñas y si son fuertes o no
+                for (int i = 0; i < cantidad; i++)
+                {
+                    Console.WriteLine(passwords[i].Contraseña + " " + esFuerte[i]);
+                }
+
+                Console.ReadKey();
+            }
         }
     }
 }
+
