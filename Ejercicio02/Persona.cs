@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +14,7 @@ namespace Ejercicio02
         private const int IMCIDEAL = 0;
         private const int IMCALTO = 1;
 
-      
+     
         private string nombre = "";
         private int edad = 0;
         private string dni;
@@ -22,6 +22,7 @@ namespace Ejercicio02
         private double peso = 0;
         private double altura = 0;
 
+      
         public Persona() { }
 
         public Persona(string nombre, int edad, char sexo)
@@ -39,73 +40,57 @@ namespace Ejercicio02
             this.altura = altura;
         }
 
-     
+      
         public int calcularIMC()
         {
             double imc = peso / (altura * altura);
-            if (imc < 20) 
-            {
-                return IMCBAJO;
-            }
-            else if (imc <= 25) 
-            {
-                return IMCIDEAL;
-            }
+            if (imc < 20) return IMCBAJO;
+            else if (imc <= 25) return IMCIDEAL;
             else return IMCALTO;
         }
 
-        public bool esMayorDeEdad() 
-        {
-            return edad >= 18;
-        }
+        public bool esMayorDeEdad() => edad >= 18;
 
-        private char comprobarSexo(char sexo)
-        {
-        if (sexo == 'H' || sexo == 'M')
-        {
-            return sexo;
-        }
-            return SEXO_DEFECTO;
-        }
+        private char comprobarSexo(char sexo) => (sexo == 'H' || sexo == 'M') ? sexo : SEXO_DEFECTO;
 
         private string generaDNI()
         {
             Random rnd = new Random();
             int numero = rnd.Next(10000000, 99999999);
             string letras = "TRWAGMYFPDXBNJZSQVHLCKE";
-            char letra = letras[numero % 23]; //esto nos va a dar la letra (la letra que elija va  a ser entre 0 y 22)
-            
-            return numero+letra;
+            char letra = letras[numero % 23];
+            return $"{numero}{letra}";
         }
 
-       public void setNombre(string nombre)
+        public void Nombre(string nombre)
         {
             this.nombre = nombre;
         }
 
-        public void setEdad(int edad)
+        public void Edad(int edad)
         {
             this.edad = edad;
         }
-        
-        public void setSexo(char sexo)
+
+        public void Sexo(char sexo)
         {
             this.sexo = comprobarSexo(sexo);
         }
-        
-        public void setPeso(double peso)
+
+        public void Peso(double peso)
         {
             this.peso = peso;
         }
-        
-        public void setAltura(double altura)
+
+        public void Altura(double altura)
         {
             this.altura = altura;
         }
 
+
         public override string ToString()
         {
-            return "Nombre: " + nombre + "Edad: " + edad + "DNI: " + dni + "Sexo: " + sexo + "Peso: " + peso + "kg"+ "Altura: " + altura + "m";
+            return $"Nombre: {nombre}, Edad: {edad}, DNI: {dni}, Sexo: {sexo}, Peso: {peso}kg, Altura: {altura}m";
         }
     }
 }
