@@ -31,7 +31,10 @@ namespace Ejercicio08
             foreach (var estudiante in Estudiantes)
             {
                 Random rnd = new Random();
-                if (rnd.Next(0, 100) >= 50) presentes++;
+                if (rnd.Next(0, 100) >= 50) 
+                {
+                    presentes++;
+                }
             }
 
             if (!Profesor.EstaDisponible())
@@ -42,7 +45,7 @@ namespace Ejercicio08
             {
                 return false;
             }
-            if (presentes < NumMaxESTUDIANTES / 2)
+            if (presentes < (NumMaxESTUDIANTES / 2)) //si hay menos de la mitad del maximo de estudiantes
             {
                 return false;
             }
