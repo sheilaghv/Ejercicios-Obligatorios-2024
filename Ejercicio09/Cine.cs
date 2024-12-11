@@ -51,7 +51,7 @@ namespace Ejercicio09
 
                 if (Sala[fila, columna] != "X") // Si el asiento no está ocupado
                 {
-                    Sala[fila, columna] = "X";
+                    Sala[fila, columna] = "X"; //si no hay x, se puede sentar y ahora se pone la x en esa posicion
                     return true;
                 }
             }
@@ -60,11 +60,11 @@ namespace Ejercicio09
 
         public void MostrarSala()
         {
-            for (int i = 0; i < Sala.GetLength(0); i++)
+            for (int i = 0; i < Sala.GetLength(0); i++)  //recorre fila
             {
-                for (int j = 0; j < Sala.GetLength(1); j++)
+                for (int j = 0; j < Sala.GetLength(1); j++) //recorre columnas
                 {
-                    Console.Write(Sala[i, j] + " ");
+                    Console.Write(Sala[i, j] + " "); //dibuja
                 }
                 Console.WriteLine();
             }
