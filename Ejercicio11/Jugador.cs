@@ -8,8 +8,8 @@ namespace Ejercicio11
 {
     public class Jugador
     {
-        public string Nombre { get; set; }
-        public int Dinero { get; private set; }
+        public string Nombre { get; set; }  //se puede leer y modificar desde cualquier lugar
+        public int Dinero { get; private set; } //se puede leer en cualquier lugar, pero dlo se va a nodifcon la logica de esta clase
         public int Victorias { get; private set; }
 
         public Jugador(string nombre, int dineroInicial)
